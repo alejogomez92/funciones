@@ -15,7 +15,6 @@ def binomial(N:int, x:int, p:float) -> float:
     x = int(x)
     p = float(p)
     
-            
     if (p < 0) or (p > 1):
         raise ValueError('El valor de p debe estar entre 0 y 1')
     
@@ -24,12 +23,13 @@ def binomial(N:int, x:int, p:float) -> float:
     
     if N < x:
         raise ValueError('Se debe cumplir: x <= N')
-    
-    
+
     resultado = comb(N, x) * p ** x * (1 - p) ** (N - x)
     return resultado
-#%%
+
 binomial(-10, 0, 0.2)
+
+
 
 
 
